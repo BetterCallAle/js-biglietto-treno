@@ -34,18 +34,22 @@ if (userAge < 18) {
     userSale = basePrice - ((basePrice * 20) / 100);
     console.log(userSale);
 
+    finalSale = Math.round((userSale + Number.EPSILON) *100) / 100;
+
     userMessage = `Complimenti! hai diritto al 20% di sconto. Il prezzo finale è: ${finalSale} euro`;
 } else if (userAge >= 65) {
     userSale = basePrice - ((basePrice * 40) / 100)
     console.log(userSale);
 
+    finalSale = Math.round((userSale + Number.EPSILON) *100) / 100;
+
     userMessage = `Complimenti! hai diritto al 40% di sconto. Il prezzo finale è: ${finalSale} euro`;
 } else{
-    finalPrice = Math.round((basePrice + Number.EPSILON) *100) / 100;
-    userMessage = `Il prezzo del tuo biglietto è ${finalPrice}`;
+    finalSale = Math.round((basePrice + Number.EPSILON) *100) / 100;
+    userMessage = `Il prezzo del tuo biglietto è ${finalSale} euro`;
 }
 
-finalSale = Math.round((userSale + Number.EPSILON) *100) / 100;
-console.log(finalSale);
+console.log(finalSale, userMessage)
 
-console.log(userMessage);
+//OUTPUT
+document.getElementById("result").innerHTML = userMessage
