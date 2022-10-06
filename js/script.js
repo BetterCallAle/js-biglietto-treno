@@ -14,11 +14,29 @@ console.log(userAge, typeof(userAge));
 
 const userDistance = parseInt(prompt("Inserisci la distanza in km"));
 console.log(userDistance,  typeof(userDistance));
+
 //Calcolare il prezzo base del suo biglietto
-//Calcolare lo sconto per gli over 65
+const basePrice = ticketPrice * userDistance;
+console.log(basePrice);
 //SE l'utente ha meno di 18 anni 
     //-Calcolare lo sconto (prezzo del biglietto base + sconto del 20%)
 //ALLORA SE l'utente ha più di 65 anni
     //-Calcolare lo sconto (prezzo del biglietto base + sconto del 40%)
 //ALTRIMENTI
     //-Messaggio con prezzo base del biglietto
+
+let userSale = ""
+let userMessage = ""
+    
+if (userAge < 18) {
+    userSale =  basePrice - ((basePrice * 20) / 100)
+    userMessage = `Complimenti! hai diritto al 20% di sconto. Il prezzo finale è: ${userSale} euro`;
+    console.log(userMessage);
+} else if (userAge >= 65) {
+    userSale = basePrice - ((basePrice * 40) / 100)
+    userMessage = `Complimenti! hai diritto al 40% di sconto. Il prezzo finale è: ${userSale} euro`;
+    console.log(userMessage);
+} else{
+    userMessage = `Il prezzo del tuo biglietto è ${basePrice} euro`
+    console.log(userMessage)
+}
