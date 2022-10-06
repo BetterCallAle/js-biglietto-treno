@@ -28,28 +28,24 @@ console.log(basePrice);
 
 let userSale = ""
 let userMessage = ""
-let finalSale = "" 
 
 if (userAge < 18) {
-    userSale = basePrice - ((basePrice * 20) / 100);
+    userSale = (basePrice - ((basePrice * 20) / 100)).toFixed(2);
     console.log(userSale);
+    userMessage = `Complimenti! hai diritto al 20% di sconto. Il prezzo finale è: ${userSale} euro`;
 
-    finalSale = Math.round((userSale + Number.EPSILON) *100) / 100;
-
-    userMessage = `Complimenti! hai diritto al 20% di sconto. Il prezzo finale è: ${finalSale} euro`;
 } else if (userAge >= 65) {
-    userSale = basePrice - ((basePrice * 40) / 100)
+    userSale = (basePrice - ((basePrice * 40) / 100)).toFixed(2)
     console.log(userSale);
+    userMessage = `Complimenti! hai diritto al 40% di sconto. Il prezzo finale è: ${userSale} euro`;
 
-    finalSale = Math.round((userSale + Number.EPSILON) *100) / 100;
-
-    userMessage = `Complimenti! hai diritto al 40% di sconto. Il prezzo finale è: ${finalSale} euro`;
 } else{
-    finalSale = Math.round((basePrice + Number.EPSILON) *100) / 100;
-    userMessage = `Il prezzo del tuo biglietto è ${finalSale} euro`;
+    userSale = basePrice.toFixed(2)
+    console.log(userSale)
+    userMessage = `Il prezzo del tuo biglietto è ${userSale} euro`;
 }
 
-console.log(finalSale, userMessage)
+console.log(userSale, userMessage)
 
 //OUTPUT
 document.getElementById("result").innerHTML = userMessage
