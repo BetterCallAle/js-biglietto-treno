@@ -45,7 +45,7 @@ if (userAge < 18) {
     userMessage = `Il prezzo del tuo biglietto è ${userSale} euro`;
 }
 
-console.log(userSale, userMessage)
+console.log(userMessage)
 
 //OUTPUT
-document.getElementById("result").innerHTML = userMessage
+document.getElementById("result").innerHTML = userMessage;
