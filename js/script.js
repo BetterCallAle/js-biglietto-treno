@@ -5,7 +5,15 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca. */
 
-//Chiedere al cliente i km da percorrere e la sua età
+//Dati
+const ticketPrice = 0.21;
+
+//Chiedere al cliente i km da percorrere e la sua età e convertirli in numeri
+const userAge = parseInt(prompt("Inserisci la tua età"));
+console.log(userAge, typeof(userAge));
+
+const userDistance = parseInt(prompt("Inserisci la distanza in km"));
+console.log(userDistance,  typeof(userDistance));
 //Calcolare il prezzo base del suo biglietto
 //Calcolare lo sconto per gli over 65
 //SE l'utente ha meno di 18 anni 
