@@ -5,3 +5,12 @@ va applicato uno sconto del 20% per i minorenni
 va applicato uno sconto del 40% per gli over 65.
 L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca. */
 
+//Chiedere al cliente i km da percorrere e la sua età
+//Calcolare il prezzo base del suo biglietto
+//Calcolare lo sconto per gli over 65
+//SE l'utente ha meno di 18 anni 
+    //-Calcolare lo sconto (prezzo del biglietto base + sconto del 20%)
+//ALLORA SE l'utente ha più di 65 anni
+    //-Calcolare lo sconto (prezzo del biglietto base + sconto del 40%)
+//ALTRIMENTI
+    //-Messaggio con prezzo base del biglietto
